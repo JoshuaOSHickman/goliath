@@ -201,7 +201,7 @@ module Goliath
 
           File.umask(0000)
 
-          stdout_log_file = "#{File.dirname(@log_file)}/#{File.basename(@log_file)}_stdout.log"
+          stdout_log_file = "/dev/null" #"#{File.dirname(@log_file)}/#{File.basename(@log_file)}_stdout.log"
 
           STDIN.reopen("/dev/null")
           STDOUT.reopen(stdout_log_file, "a")
