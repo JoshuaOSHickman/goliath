@@ -199,7 +199,7 @@ module Goliath
           @log_file ||= File.expand_path('goliath.log')
           store_pid(Process.pid)
 
-          File.umask(0000)
+          #File.umask(0000)
 
           stdout_log_file = "/dev/null" #"#{File.dirname(@log_file)}/#{File.basename(@log_file)}_stdout.log"
 
